@@ -1,0 +1,158 @@
+@use "@/assets/styles/containers.scss" as c;
+@use "@/assets/styles/vareables.scss" as s;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 60px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background: s.$orange;
+    color: s.$orange;
+}
+
+::selection{
+    color: white;
+    background: s.$orange;
+}
+
+// the logo styles
+.logo {
+    padding: 10px 0;
+    @include c.media (c.$lg) {
+        max-width: 390px;
+        width: 100%;
+    }
+    @include c.media (c.$big) {
+        max-width: 320px;
+        width: 100%;
+    }
+    @include c.media (c.$sm) {
+        max-width: 220px;
+        width: 100%;
+    }
+}
+
+// the default button style 
+
+.button {
+    &-big {
+        font-family: s.$rm;
+        font-size: 24px;
+        line-height: 28px;
+        color: s.$white;
+        background: s.$orange;
+        padding: 16px 84px;
+        border-radius: 11px;
+        transition: 500ms;
+
+        @include c.media (c.$lg) {
+            font-size: 20px;
+        }
+    }
+
+    &-mini {
+        font-family: s.$rr;
+        font-size: 20px;
+        color: s.$white;
+        background: s.$orange;
+        padding: 8px 40px;
+        border-radius: 11px;
+        transition: 500ms;
+
+        &:hover {
+            background: s.$darkBg;
+        }
+    }
+}
+
+
+// the title styles
+
+.title {
+    font-family: s.$hr;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+
+    &-light {
+        font-family: s.$hb;
+        font-size: 64px;
+        color: s.$white;
+        line-height: 60px;
+
+        &::after {
+            content: '';
+            display: block;
+            margin-top: 10px;
+            width: 100px;
+            height: 3px;
+            line-height: 60px;
+            background: s.$orange;
+        }
+
+        @include c.media (c.$lg) {
+            font-size: 48px;
+        }
+        @include c.media (c.$sm) {
+            font-size: 32px;
+        }
+        @include c.media (c.$xs) {
+            line-height: auto;
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        margin-top: 10px;
+        width: 100px;
+        height: 3px;
+        line-height: 60px;
+        background: s.$orange;
+    }
+
+    @include c.media (c.$lg) {
+        font-size: 48px;
+    }
+    @include c.media (c.$sm) {
+        font-size: 32px;
+    }
+}
+
+.link {
+    font-family: s.$il;
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+    color: s.$orange;
+
+    &-text {
+        text-align: center;
+        font-family: s.$il;
+        font-size: 20px;
+        line-height: 24px;
+        color: s.$grayText;
+
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

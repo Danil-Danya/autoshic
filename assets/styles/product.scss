@@ -1,0 +1,53 @@
+@use "@/assets/styles/containers.scss" as c;
+@use "@/assets/styles/vareables.scss" as s;
+
+// the default styles for produc card
+
+.product {
+    &__container {
+        &-text {
+            padding: 0 15px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 80px;
+        box-shadow: 10px 10px 27px rgba(0, 0, 0, 0.25);
+
+        @include c.media (c.$big) {
+            transform: scale(0.8);
+        }
+        @include c.media (c.$md) {
+            transform: scale(1);
+            margin: 30px 0;
+        }
+    }
+
+    &__title-mini {
+        font-family: s.$im;
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        max-width: 1270px;
+        width: 100%;
+    }
+
+    &__text {
+        font-family: s.$rr;
+        font-size: 16px;
+    }
+    
+    &__button {
+        margin: 30px 0;
+        display: inline-block;
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
